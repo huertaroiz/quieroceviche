@@ -3,48 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceviches a Domicilio</title>
+    <title>Ceviches a Domicilio | Chihuahua</title>
+    <!-- Importando fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            background-color: #fdfdfd;
+            background-color: #f4f4f4;
+            background-image: radial-gradient(circle, #ffffff 0%, #f4f4f4 100%);
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            margin: 0;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            margin: 0;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 450px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 40px 30px;
             text-align: center;
-            padding: 20px;
+            box-sizing: border-box;
+            margin: 20px;
         }
+
+        .location {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
         h1 {
-            color: #f96b0c; /* Naranja del flyer */
-            margin-bottom: 5px;
-            font-size: 32px;
+            font-weight: 900;
+            font-size: 42px;
+            color: #f26600; 
+            margin: 0;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: -1px;
         }
-        p {
-            color: #555;
-            margin-bottom: 35px;
-            font-size: 18px;
-        }
-        .btn {
-            background-color: #f96b0c;
-            color: white;
-            padding: 18px 40px;
-            text-decoration: none;
+
+        h2 {
+            font-weight: 900;
             font-size: 20px;
+            color: #f26600;
+            margin: 5px 0 15px 0;
+            text-transform: uppercase;
+        }
+
+        .days {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* --- NUEVO ESTILO DE MENÚ --- */
+        .menu-box {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid #f0f0f0;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #333;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .menu-price {
+            color: #f26600;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .includes {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        /* ---------------------------- */
+
+        .delivery {
+            font-weight: 700;
+            font-size: 15px;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .cursive {
+            font-family: 'Caveat', cursive;
+            font-size: 34px;
+            color: #f26600;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .note {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .btn {
+            background-color: #f26600;
+            color: white;
+            padding: 16px 30px;
+            text-decoration: none;
+            font-size: 18px;
             font-weight: bold;
             border-radius: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 6px 15px rgba(242, 102, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 8px rgba(242, 102, 0, 0.3);
+        }
+
+        .btn svg {
+            width: 22px;
+            fill: currentColor;
         }
     </style>
 </head>
 <body>
-    <h1>¡Pide tu Ceviche!</h1>
-   <p>Por el momento solo aceptamos pedidos por Instagram.</p>
-    
-    <!-- Al ser un clic manual, el celular sí abre el chat de IG -->
-    <a href="https://ig.me/m/cduthoy" class="btn">Enviar mensaje</a>
-    
+
+    <div class="card">
+        <div class="location">📍 Chihuahua, Chihuahua, MX</div>
+        
+        <h1>Ceviches</h1>
+        <h2>De Litro y Medio Litro</h2>
+        
+        <div class="days">&gt;&gt; SÁBADOS Y DOMINGOS &lt;&lt;</div>
+        
+        <!-- Tarjeta de menú interior -->
+        <div class="menu-box">
+            <div class="menu-item">
+                <span>Litro</span>
+                <span class="menu-price">$285</span>
+            </div>
+            <div class="menu-item">
+                <span>Medio Litro</span>
+                <span class="menu-price">$180</span>
+            </div>
+        </div>
+        
+        <div class="includes">* Incluye tostadas y galletas</div>
+        
+        <div class="delivery">
+            &gt;&gt; Programa tu entrega a domicilio
+        </div>
+        
+        <div class="cursive">Pide tu ceviche aquí:</div>
+        
+        <div class="note">Por el momento solo aceptamos pedidos por Instagram.</div>
+        
+        <a href="https://ig.me/m/cduthoy" class="btn">
+            <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            Enviar mensaje
+        </a>
+    </div>
+
 </body>
 </html>
