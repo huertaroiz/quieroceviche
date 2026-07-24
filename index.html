@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ceviches a Domicilio</title>
-    <!-- Redirección HTML -->
-    <meta http-equiv="refresh" content="0; url=https://ig.me/m/cduthoy">
-    
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #fdfdfd;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-            color: #333;
-            text-align: center;
             margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #f96b0c; /* Naranja del flyer */
+            margin-bottom: 5px;
+            font-size: 32px;
+        }
+        p {
+            color: #555;
+            margin-bottom: 35px;
+            font-size: 18px;
+        }
+        .btn {
+            background-color: #f96b0c;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
-    <p>Abriendo Instagram para tu pedido... <br> Si no carga, <a href="https://ig.me/m/cduthoy">haz clic aquí</a>.</p>
-
-    <!-- Redirección JS -->
-    <script>
-        setTimeout(function() {
-            window.location.href = "https://ig.me/m/cduthoy";
-        }, 100);
-    </script>
+    <h1>¡Pide tu Ceviche!</h1>
+   <p>Por el momento solo aceptamos pedidos por Instagram.</p>
+    
+    <!-- Al ser un clic manual, el celular sí abre el chat de IG -->
+    <a href="https://ig.me/m/cduthoy" class="btn">Enviar mensaje</a>
+    
 </body>
 </html>
