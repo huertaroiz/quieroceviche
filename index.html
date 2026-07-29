@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceviches a Domicilio | Chihuahua</title>
+    <title>Menú a Domicilio | Chihuahua</title>
     <!-- Importando fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px 0;
         }
 
         .card {
@@ -51,14 +52,7 @@
             line-height: 1;
             text-transform: uppercase;
             letter-spacing: -1px;
-        }
-
-        h2 {
-            font-weight: 900;
-            font-size: 20px;
-            color: #f26600;
-            margin: 5px 0 15px 0;
-            text-transform: uppercase;
+            margin-bottom: 15px;
         }
 
         .days {
@@ -69,7 +63,7 @@
             margin-bottom: 25px;
         }
 
-        /* --- NUEVO ESTILO DE MENÚ --- */
+        /* --- ESTILO DE MENÚ LIMPIO SIN BOTONES FALSOS --- */
         .menu-box {
             background-color: #ffffff;
             border-radius: 16px;
@@ -80,16 +74,49 @@
             text-align: left;
         }
 
+        .product-group {
+            margin-bottom: 25px;
+        }
+
+        .product-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .product-header {
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #eaeaea; /* Línea sutil en lugar de fondo */
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .product-name {
+            font-weight: 900;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #f26600; /* Mantiene la identidad sin peso visual extra */
+        }
+
+        .product-desc {
+            font-size: 13px;
+            font-weight: 400;
+            color: #888;
+        }
+
         .menu-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 15px;
             color: #333;
-            padding-bottom: 12px;
-            margin-bottom: 12px;
-            border-bottom: 1px dashed #e0e0e0;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            border-bottom: 1px dashed #f0f0f0;
+            padding-left: 5px;
+            padding-right: 5px;
         }
 
         .menu-item:last-child {
@@ -100,9 +127,10 @@
 
         .menu-price {
             color: #f26600;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 900;
         }
+        /* ------------------------------------------- */
 
         .includes {
             font-size: 12px;
@@ -110,7 +138,6 @@
             margin-bottom: 25px;
             text-align: center;
         }
-        /* ---------------------------- */
 
         .delivery {
             font-weight: 700;
@@ -169,29 +196,69 @@
         <div class="location">📍 Chihuahua, Chihuahua, MX</div>
         
         <h1>Ceviches</h1>
-        <h2>De Litro y Medio Litro</h2>
         
         <div class="days">&gt;&gt; SÁBADOS Y DOMINGOS &lt;&lt;</div>
         
         <!-- Tarjeta de menú interior -->
         <div class="menu-box">
-            <div class="menu-item">
-                <span>Litro / camarón</span>
-                <span class="menu-price">$285</span>
+            
+            <!-- CEVICHE -->
+            <div class="product-group">
+                <div class="product-header">
+                    <span class="product-name">Ceviche</span>
+                    <span class="product-desc">(camarón encurtido)</span>
+                </div>
+                <div class="menu-item">
+                    <span>Litro</span>
+                    <span class="menu-price">$285</span>
+                </div>
+                <div class="menu-item">
+                    <span>Medio litro</span>
+                    <span class="menu-price">$180</span>
+                </div>
             </div>
-            <div class="menu-item">
-                <span>Medio litro / camarón</span>
-                <span class="menu-price">$180</span>
+
+            <!-- CÓCTEL -->
+            <div class="product-group">
+                <div class="product-header">
+                    <span class="product-name">Cóctel</span>
+                    <span class="product-desc">(camarón cocido)</span>
+                </div>
+                <div class="menu-item">
+                    <span>Litro</span>
+                    <span class="menu-price">$285</span>
+                </div>
+                <div class="menu-item">
+                    <span>Medio litro</span>
+                    <span class="menu-price">$180</span>
+                </div>
             </div>
+
+            <!-- AGUACHILE -->
+            <div class="product-group">
+                <div class="product-header">
+                    <span class="product-name">Aguachile</span>
+                    <span class="product-desc">(camarón encurtido)</span>
+                </div>
+                <div class="menu-item">
+                    <span>Litro</span>
+                    <span class="menu-price">$285</span>
+                </div>
+                <div class="menu-item">
+                    <span>Medio litro</span>
+                    <span class="menu-price">$180</span>
+                </div>
+            </div>
+
         </div>
         
         <div class="includes">* Incluye tostadas y galletas</div>
         
         <div class="delivery">
-            &gt;&gt; Programa tu entrega a domicilio
+            &gt;&gt; Programa tu pedido para el fin <<
         </div>
         
-        <div class="cursive">Pide tu ceviche aquí:</div>
+        <div class="cursive"> Ordena desde aquí:</div>
         
         <div class="note">Por el momento solo aceptamos pedidos por Instagram.</div>
         
@@ -201,6 +268,7 @@
         </a>
     </div>
     
+    <!-- SCRIPT DETECTOR DE IPHONE (INTACTO) -->
     <script>
         var es_iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
         if (es_iOS) {
@@ -208,5 +276,4 @@
         }
     </script>
 </body>
-</html>
 </html>
